@@ -1,6 +1,6 @@
 # CSS Code Style Guide
 
-> Use [csscomb.js](https://github.com/csscomb/csscomb.js) with our [configuration file](.csscomb.json) to auto-format.
+> Tip: Use [csscomb.js](https://github.com/csscomb/csscomb.js) with our [.csscomb.json](.csscomb.json) to auto-format and [CSSLint](https://github.com/CSSLint/csslint) with our [.csslintrc](.csslintrc).
 
 ## Table of Contents
 
@@ -20,12 +20,12 @@ Use soft-tabs with two spaces:
 **CSScomb rule:** `"block-indent": "  "`
 
 ```css
-/* bom */
+/* good */
 .btn {
 	color: #fff;
 }
 
-/* ruim */
+/* bad */
 .btn{
 		color: #fff;
 }
@@ -40,13 +40,13 @@ Always use double quotation marks:
 **CSScomb rule:** `"quotes": "double"`
 
 ```css
-/* bom */
+/* good */
 .btn {
 	background-image: url("textura.jpg");
 	font-family: "Helvetica Neue", sans-serif;
 }
 
-/* ruim */
+/* bad */
 .btn {
 	background-image: url('textura.jpg');
 	font-family: 'Helvetica Neue', sans-serif;
@@ -60,12 +60,12 @@ Include a space before opening the rule keys:
 **CSScomb rule:** `"space-before-opening-brace": " "`
 
 ```css
-/* bom */
+/* good */
 .btn {
 	color: #fff;
 }
 
-/* ruim */
+/* bad */
 .btn{
 	color: #fff;
 }
@@ -78,12 +78,12 @@ Closes the keys on a new line:
 **CSScomb rule:** `"space-before-closing-brace": "\n"`
 
 ```css
-/* bom */
+/* good */
 .btn {
 	color: #fff;
 }
 
-/* ruim */
+/* bad */
 .btn {
 	color: #fff;}
 ```
@@ -95,12 +95,12 @@ Include a space after the `:` declarations:
 **CSScomb rule:** `"space-after-colon": " "`
 
 ```css
-/* bom */
+/* good */
 .btn {
 	color: #fff;
 }
 
-/* ruim */
+/* bad */
 .btn {
 	color:#fff;
 }
@@ -113,12 +113,12 @@ Always use one `;` At the end of the declarations:
 **CSScomb rule:** `"always-semicolon": true`
 
 ```css
-/* bom */
+/* good */
 .btn {
 	color: #fff;
 }
 
-/* ruim */
+/* bad */
 .btn {
 	color: #fff
 }
@@ -131,14 +131,14 @@ Always keep one declarations per line:
 **CSScomb rule:** `"space-after-selector-delimiter": "\n"`
 
 ```css
-/* bom */
+/* good */
 .nav,
 .footer,
 .btn {
 	color: #fff;
 }
 
-/* ruim */
+/* bad */
 .nav, .footer, .btn {
 	color: #fff;
 }
@@ -148,10 +148,8 @@ Always keep one declarations per line:
 
 Separate the rules by a blank line:
 
-**CSScomb rule:** ``
-
 ```css
-/* bom */
+/* good */
 .btn {
 	color: #fff;
 }
@@ -160,7 +158,7 @@ Separate the rules by a blank line:
 	color: #fff;
 }
 
-/* ruim */
+/* bad */
 .btn {
 	color: #fff;
 }
@@ -176,12 +174,12 @@ Always use lowercase:
 **CSScomb rule:** `"element-case": "lower"`
 
 ```css
-/* bom */
+/* good */
 .nav-item {
 	color: #fff;
 }
 
-/* ruim */
+/* bad */
 .Nav-item {
 	color: #fff;
 }
@@ -191,15 +189,13 @@ Always use lowercase:
 
 Use dash to separate names:
 
-**CSScomb rule:** ``
-
 ```css
-/* bom */
+/* good */
 .nav-item {
 	color: #fff;
 }
 
-/* ruim */
+/* bad */
 .nav_item {
 	color: #fff;
 }
@@ -212,12 +208,12 @@ Whenever using hexadecimal values ​​always use reduced:
 **CSScomb rule:** `"color-shorthand": true`
 
 ```css
-/* bom */
+/* good */
 .nav-item {
 	color: #fff;
 }
 
-/* ruim */
+/* bad */
 .nav-item {
 	color: #ffffff;
 }
@@ -227,15 +223,16 @@ Whenever using hexadecimal values ​​always use reduced:
 
 Do not specify units when the value is zero:
 
-**CSScomb rule:** `"unitless-zero": true`
+**CSScomb rule:** `"unitless-zero": true` <br>
+**CSSLint rule:** `zero-units`
 
 ```css
-/* bom */
+/* good */
 .nav-item {
 	padding: 0;
 }
 
-/* ruim */
+/* bad */
 .nav-item {
 	padding: 0px;
 }
@@ -248,12 +245,12 @@ Do not use values ​​starting with zero:
 **CSScomb rule:** `"leading-zero": false`
 
 ```css
-/* bom */
+/* good */
 .nav-item {
 	transition: color .3s;
 }
 
-/* ruim */
+/* bad */
 .nav-item {
 	transition: color 0.3s;
 }
@@ -265,15 +262,13 @@ Do not use values ​​starting with zero:
 
 Use function-related names never style:
 
-**CSScomb rule:** ``
-
 ```css
-/* bom */
+/* good */
 .spacing-default {
 	margin-left: 10px;
 }
 
-/* ruim */
+/* bad */
 .margin-left {
 	margin-left: 10px;
 }
@@ -288,7 +283,7 @@ Declarations grouped by type:
 **CSScomb rule:** `"sort-order": [...]`
 
 ```css
-/* bom */
+/* good */
 .container {
   font-size: 1em;
   font-weight: bold;
@@ -305,7 +300,7 @@ Declarations grouped by type:
   background: #ff567e;
 }
 
-/* ruim */
+/* bad */
 .container {
   display: grid;
   font-size: 1em;
@@ -328,16 +323,14 @@ Declarations grouped by type:
 
 Use function-related names never style:
 
-**CSScomb rule:** ``
-
 ```css
-/* bom */
+/* good */
 :root {
 	--highlight-color: blue;
 	--secondary-color: red;
 }
 
-/* ruim */
+/* bad */
 :root {
 	--blue: blue;
 	--red: red;
@@ -350,40 +343,7 @@ Use function-related names never style:
 
 - Configure your editor to show blank spaces
 - Remove blank spaces
-
-<hr>
-
-Use a [.editorconfig](.editorconfig) to help keep the code convention:
-
-```
-# editorconfig.org
-
-root = true
-
-[*]
-charset = utf-8
-insert_final_newline = true
-trim_trailing_whitespace = true
-end_of_line = lf
-indent_style = tab
-indent_size = 2
-```
-
-<hr>
-
-Never use generic selectors(elements):
-
-```css
-/* bom */
-.heading {
-
-}
-
-/* ruim */
-h1 {
-
-}
-```
+- Use a [.editorconfig](.editorconfig) to help keep the code convention:
 
 <hr>
 
