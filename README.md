@@ -11,14 +11,21 @@
 #### Style
 
 - CSS
-  - [Style Guide](patterns/CSS.md)
-  - [CSScomb Rules](patterns/.csscomb.json)
-  - [CSSlint rules](patterns/.csslintrc)
+  - [Style Guide](css/CSS.md)
+  - [CSScomb Rules](css/.csscomb.json)
+  - [CSSlint rules](css/.csslintrc)
 
 #### Behavior
 
-- <s>Javascript</s>
-- <s>ReactJS</s>
+- Javascript
+  - [Style Guide](js/JS.md)
+  - [ESLint Rules](js/.eslintrc.json)
+
+## Contributing
+
+Find on our [roadmap](https://github.com/afonsopacifer/code-style-guide/issues/1) the next steps of the project ;)
+<br>
+Want to contribute? [Follow these recommendations](https://github.com/afonsopacifer/code-style-guide/blob/master/CONTRIBUTING.md).
 
 ## License
 

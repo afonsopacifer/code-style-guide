@@ -361,15 +361,9 @@ Use function-related names never style:
 
 - Configure your editor to show blank spaces
 - Remove blank spaces
-- Use a [.editorconfig](.editorconfig) to help keep the code convention:
+- Use a [.editorconfig](../.editorconfig) to help keep the code convention:
 
 <hr>
-
-## Contributing
-
-Find on our [roadmap](https://github.com/afonsopacifer/code-style-guide/issues/1) the next steps of the project ;)
-<br>
-Want to contribute? [Follow these recommendations](https://github.com/afonsopacifer/code-style-guide/blob/master/CONTRIBUTING.md).
 
 ## References
 
