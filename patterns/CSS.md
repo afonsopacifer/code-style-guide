@@ -276,6 +276,24 @@ Use function-related names never style:
 
 <hr>
 
+Never use ID for selectors:
+
+**CSSLint rule:** `ids`
+
+```css
+/* good */
+.btn {
+	color: #fff;
+}
+
+/* bad */
+#btn {
+	color: #fff;
+}
+```
+
+<hr>
+
 ### Declarations
 
 Declarations grouped by type:
